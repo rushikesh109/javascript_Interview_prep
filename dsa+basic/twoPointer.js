@@ -1,0 +1,14 @@
+const nums = [0,1,0,2,12,0,3];
+
+function moveZeros(nums){
+    let i = 0;
+    for(let j = 0; j < nums.length; j++){
+        if(nums[j] !== 0){
+         [nums[i], nums[j]] = [nums[j], nums[i]]
+         i++;
+        }
+    }
+    return nums
+}
+
+console.log(moveZeros(nums));
