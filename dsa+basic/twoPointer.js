@@ -12,3 +12,4 @@ function moveZeros(nums){
 }
 
 console.log(moveZeros(nums));
+
