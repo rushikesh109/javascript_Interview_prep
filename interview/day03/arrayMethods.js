@@ -2,6 +2,7 @@
 //filter selects, 
 // reduce accumulates
 
+const array = [2,4,6,7]
 
 const newArray = array.map(n => n * 2)
 
