@@ -13,3 +13,17 @@ function moveZeros(nums){
 
 console.log(moveZeros(nums));
 
+
+
+
+function zeros(nums){
+    let i = 0;
+
+    for(let j = 0; j < nums.length; j++){
+        [nums[i], nums[j]] = [nums[j], nums[i]];
+        i++;
+    }
+    return nums
+}
+
+console.log(zeros(nums));
