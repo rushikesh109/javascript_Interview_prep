@@ -1,0 +1,1 @@
+// Object literals --> const user = { }  --> this is called literal syntax of object
