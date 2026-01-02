@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+    <style>
+        .color-red{
+            color: red;
+        }
+        .underline{
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Correct CSS link -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div id="roo">
+        <h1>DOM</h1>
+        <p>DOM basically means Document Object Model</p>
+
+        <div class="block">
+            <h4>Hey there my name is <span id="username">
+                Rushikesh
+            </span></h4>
+            <pre>
+                <code>console.log('Hey there')</code>
+            </pre>
+        </div>
+        <div id = "root">
+            <h1>hello</h1>
+        </div>
+
+        <button id="myButton">Press Me</button>
+    </div>
+
+    <!-- External JS file -->
+    <!-- <script src="dom.js"></script> -->
+
+    <script>
+        const el = document.getElementById("username");
+        console.log(el)
+        el.setAttribute("arial", "123")
+        el.innerText = "sakshi";
+        el.classList.add("color-red", "underline")
+        console.log(el.classList)
+       <!-- el.classList.remove('color-red')  -->
+       el.style.color ="tomato";
+       el.parentElement.style.background="grey";
+       
+    </script>
+</body>
+</html>
