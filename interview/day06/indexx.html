@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="block">
+        <h4 id ="name-block">Hey My,name is
+            <span id="username">
+                Rushikesh Mangrule
+            </span>
+        </h4>
+        <p class="block"> here is code for you</p>
+        <pre>
+        <code>
+            console.log('hey there')
+        </code>
+    </pre>
+    </div>
+
+    <div id="my-container"></div>
+
+    <button id="clickButton"> Click me</button>
+
+    <script>
+        // <!-- function handleButtonClicked(){
+        //   console.log("That button is clicked")
+        //     alert("hey i am clicked")
+        //   } -->
+
+        const element = document.getElementById("clickButton")
+   const nameBlock = document.getElementById("name-block")
+
+
+       // element.addEventListener("click", () => {
+         //   <!-- console.log("hey i am clicked") -->
+            //if(nameBlock.style.color ="red"){
+          //      nameBlock.style.color ="blue"
+        //    }
+      //          nameBlock.style.color ="red"
+    //    })
+
+      //  const allChildren = document.querySelector("body").children;
+
+      //  for(let i = 0 ; i< allChildren.length; i++){
+        //    allChildren.item(i).addEventListener("click", () => {
+          //    allChildren.item(i).remove()
+            //})
+        //}
+
+        const container = document.getElementById("my-container")
+
+        element.addEventListener("click", () => {
+            const el = document.createElement("h1")
+            el.innerHTML = "Rushikesh"
+            container.appendChild(el)
+        })
+    </script>
+
+    <!-- <script> -->
+    <!-- // element.addEventListener("click", () => console.log("hacked")) -->
+    <!-- </script> -->
+</body>
+
+</html>
