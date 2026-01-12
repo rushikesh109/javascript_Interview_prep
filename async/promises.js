@@ -1,5 +1,3 @@
-const { set } = require("mongoose");
-
 let stocks = {
     fruits: ["strawberry", "banana", "mango", "grapes"],
     liquid: ["water", "ice"],
