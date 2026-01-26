@@ -7,6 +7,9 @@
 //     console.log("promise 1 cosumned");
 // })
 
+const { response } = require("express");
+const { set } = require("mongoose");
+
 // new Promise((resolve, reject) => {
 //     setTimeout(()=>{
 //         console.log("hey what are u doing");
@@ -146,30 +149,43 @@
 // };
 // getUserDetails();
 
-const errorPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let error = false;
+// const errorPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let error = false;
 
-    if (!error) {
-      resolve({
-        username: "rushi",
-        email: "hey@gmail.com",
-      });
-    } else {
-      reject(new Error ("Something went wrong"));
-    }
-  }, 1000);
-});
+//     if (!error) {
+//       resolve({
+//         username: "rushi",
+//         email: "hey@gmail.com",
+//       });
+//     } else {
+//       reject(new Error("Something went wrong"));
+//     }
+//   }, 1000);
+// });
 
-const callfunction = async () => {
+// const callfunction = async () => {
+//   try {
+//     const data = await errorPromise;
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error.message);
+//   } finally {
+//     console.log("executed");
+//   }
+// };
+
+// callfunction();
+
+const getUser = async () => {
   try {
-    const data = await errorPromise;
-    console.log(data);
+    const response = await fetch("https://lies-as-a-service.onrender.com/lie?category=sick");
+    const data = await response.json();
+    setTimeout(()=>{
+      console.log(data.lie);
+    });
   } catch (error) {
-    console.log(error.message);
-  } finally {
-    console.log("executed");
+    console.error("Something went wrong", error.message);
   }
 };
-
-callfunction()
+getUser();
