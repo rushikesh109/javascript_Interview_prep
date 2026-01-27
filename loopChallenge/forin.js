@@ -1,5 +1,4 @@
 //stop when population of berlin is found;
-
 let cityPopulation ={
     "london" : 3,
     "mumbai":1,
