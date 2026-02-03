@@ -44,3 +44,43 @@ let method = new Car("suv", "2nd Generation", "india")
 // console.log(method.start());
 
 
+
+
+//ENCAPSULATION
+//RESTRICTING DIRECT ACCESS TO A DATA OBJECT
+
+
+class BankAccount{
+    #balance = 0;
+
+    deposite(amount){
+        this.#balance += amount;
+        return this.#balance
+    }
+
+    getBalance(){
+        return `$ ${this.#balance}`
+    }
+}
+
+let account = new BankAccount();
+// console.log(account.deposite(40));
+// console.log(account.getBalance());
+
+
+// static METHOD
+
+class Calculator{
+    static add(a,b){
+        return a + b
+    }
+}
+
+const addition = new Calculator();
+// console.log(addition.add(2,3));
+console.log(Calculator.add(2,3));
+
+
+
+//Getter and setter
+
