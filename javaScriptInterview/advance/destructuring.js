@@ -1,4 +1,46 @@
 // // Basic
+// Basic
+const numbers = [1, 2, 3, 4, 5];
+const [first, second] = numbers;
+console.log(first);  // 1
+console.log(second); // 2
+
+// Skip elements
+const [a, , c] = numbers;
+console.log(a); // 1
+console.log(c); // 3
+
+// Rest operator
+const [x, y, ...rest] = numbers;
+console.log(x);    // 1
+console.log(y);    // 2
+console.log(rest); // [3, 4, 5]
+
+// Default values
+const [p, q, r = 10] = [1, 2];
+console.log(r); // 10
+
+// Swapping variables
+let var1 = 5;
+let var2 = 10;
+[var1, var2] = [var2, var1];
+console.log(var1); // 10
+console.log(var2); // 5
+
+// Nested arrays
+const nested = [1, [2, 3], 4];
+const [one, [two, three], four] = nested;
+console.log(two); // 2
+
+// Function return values
+function getCoordinates() {
+  return [10, 20];
+}
+const [lat, lng] = getCoordinates();
+console.log(lat); // 10
+console.log(lng); // 20
+
+
 // const person = { name: "Alice", age: 25, city: "NYC" };
 // const { name, age } = person;
 // console.log(name); // "Alice"
