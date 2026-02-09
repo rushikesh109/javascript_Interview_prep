@@ -68,5 +68,21 @@ console.log(person);
 
 console.log(deepClone2);
 
+//manul way 
+
+function deepClone(obj) {
+  if (obj === null || typeof obj !== 'object') return obj;
+  
+  if (obj instanceof Date) return new Date(obj);
+  if (obj instanceof Array) return obj.map(item => deepClone(item));
+  
+  const clonedObj = {};
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      clonedObj[key] = deepClone(obj[key]);
+    }
+  }
+  return clonedObj;
+}
 
 
