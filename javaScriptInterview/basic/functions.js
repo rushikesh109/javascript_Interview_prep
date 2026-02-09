@@ -84,3 +84,22 @@ function greeting (){
     console.log("hello");
     
 }
+
+
+
+//Closure
+
+function counters(){
+    let counter = 1;
+    console.log(counter);
+    return function inc(){
+        counter++
+        return counter;
+    }
+}
+
+const increment = counters();
+
+console.log(increment());
+console.log(increment());
+console.log(increment());
